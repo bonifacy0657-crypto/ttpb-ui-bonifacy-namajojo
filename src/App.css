@@ -5602,10 +5602,12 @@
 
   .file-management-toolbar {
     width: 100%;
+    justify-content: center;
   }
 
   .file-management-upload-button {
-    width: 100%;
+    width: min(100%, 260px);
+    margin: 0 auto;
   }
 
   .file-management-table-panel {
@@ -5618,11 +5620,13 @@
   }
 
   .file-management-table {
-    min-width: 560px;
+    min-width: 0;
+    width: 100%;
+    table-layout: fixed;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 540px) {
   .file-management-summary-grid {
     grid-template-columns: 1fr;
   }
@@ -5636,6 +5640,59 @@
   .file-management-field select,
   .file-management-field textarea {
     padding: 0.75rem 0.85rem;
+  }
+
+  .file-management-table-wrap {
+    overflow-x: visible;
+  }
+
+  .file-management-table,
+  .file-management-table thead,
+  .file-management-table tbody,
+  .file-management-table tr,
+  .file-management-table th,
+  .file-management-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .file-management-table thead {
+    display: none;
+  }
+
+  .file-management-table tbody {
+    display: grid;
+    gap: 12px;
+  }
+
+  .file-management-table tr {
+    background: #f8fafc;
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    border-radius: 14px;
+    padding: 12px 14px;
+  }
+
+  .file-management-table td {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 0;
+    border: none;
+  }
+
+  .file-management-table td::before {
+    content: attr(data-label);
+    color: #64748b;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    min-width: 90px;
+  }
+
+  .file-management-status-badge {
+    margin-left: auto;
   }
 
   .file-management-action-btn {

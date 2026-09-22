@@ -204,15 +204,15 @@ function FileManagementPage() {
             <tbody>
               {filteredFiles.map((file) => (
                 <tr key={file.id}>
-                  <td>{file.name}</td>
-                  <td>{file.type}</td>
-                  <td>{new Date(file.uploadDate).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}</td>
-                  <td>
+                  <td data-label="File Name">{file.name}</td>
+                  <td data-label="Document Type">{file.type}</td>
+                  <td data-label="Upload Date">{new Date(file.uploadDate).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}</td>
+                  <td data-label="Status">
                     <span className={`file-management-status-badge status-${file.status.toLowerCase().replace(/\s+/g, '-')}`}>
                       {file.status}
                     </span>
                   </td>
-                  <td>
+                  <td data-label="Actions">
                     <div className="file-management-actions">
                       <button type="button" className="file-management-action-btn action-view" aria-label={`View ${file.name}`}>
                         👁️
