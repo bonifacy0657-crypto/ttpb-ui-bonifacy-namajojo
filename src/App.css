@@ -5250,14 +5250,18 @@
 .file-management-page {
   display: grid;
   gap: 22px;
+  width: 100%;
+  max-width: 100%;
   min-width: 0;
+  overflow-x: hidden;
 }
 
 .file-management-header {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  width: 100%;
 }
 
 .file-management-header h1 {
@@ -5273,7 +5277,7 @@
   color: #475569;
   font-size: 1rem;
   line-height: 1.7;
-  text-align: center;
+  text-align: left;
 }
 
 .file-management-summary-grid {
@@ -5319,6 +5323,12 @@
   padding: 0.9rem 1.5rem;
   border-radius: 12px;
   font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .file-management-toolbar {
+    justify-content: center;
+  }
 }
 
 .file-management-upload-icon {
@@ -5400,12 +5410,13 @@
 
 .file-management-table-wrap {
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .file-management-table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 720px;
+  min-width: 620px;
 }
 
 .file-management-table th,
@@ -5570,6 +5581,66 @@
   .file-management-control-row,
   .file-management-upload-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .file-management-page {
+    gap: 18px;
+  }
+
+  .file-management-header {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .file-management-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .file-management-toolbar {
+    width: 100%;
+  }
+
+  .file-management-upload-button {
+    width: 100%;
+  }
+
+  .file-management-table-panel {
+    padding: 16px 14px;
+  }
+
+  .file-management-table-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .file-management-table {
+    min-width: 560px;
+  }
+}
+
+@media (max-width: 480px) {
+  .file-management-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .file-management-search-panel,
+  .file-management-table-panel {
+    padding: 14px 12px;
+  }
+
+  .file-management-field input,
+  .file-management-field select,
+  .file-management-field textarea {
+    padding: 0.75rem 0.85rem;
+  }
+
+  .file-management-action-btn {
+    width: 30px;
+    height: 30px;
   }
 }
 
