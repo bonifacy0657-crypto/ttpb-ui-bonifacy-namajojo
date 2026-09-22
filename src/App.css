@@ -2769,6 +2769,42 @@
   }
 }
 
+@media (max-width: 640px) {
+  .internship-header {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .internship-panel {
+    padding: 16px;
+  }
+
+  .internship-panel-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .internship-summary-row {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .internship-placement-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .internship-top-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .internship-action-btn {
+    width: 100%;
+  }
+}
+
 .setup-page {
   display: grid;
   gap: 22px;
