@@ -6064,6 +6064,67 @@
   gap: 14px;
 }
 
+@media (max-width: 768px) {
+  .teacher-registration-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .teacher-form-grid,
+  .teacher-record-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .teacher-registration-page,
+  .teacher-update-page {
+    gap: 18px;
+  }
+
+  .teacher-registration-header,
+  .teacher-update-header {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .teacher-registration-actions,
+  .teacher-record-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .teacher-registration-btn {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .teacher-registration-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .teacher-registration-card,
+  .teacher-form-card {
+    padding: 18px 16px;
+  }
+
+  .teacher-registration-card-header,
+  .teacher-form-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .teacher-registration-empty-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .teacher-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .teacher-record-card {
   display: grid;
   gap: 12px;
