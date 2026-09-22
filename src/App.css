@@ -5082,6 +5082,47 @@
   white-space: nowrap;
 }
 
+@media (max-width: 768px) {
+  .teaching-supervision-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .teaching-supervision-list-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .teaching-supervision-row {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .teaching-supervision-status {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 520px) {
+  .teaching-supervision-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .teaching-supervision-search-panel,
+  .teaching-supervision-list-panel {
+    padding: 16px 14px;
+  }
+
+  .teaching-supervision-stat-card,
+  .teaching-supervision-row {
+    padding: 18px 16px;
+  }
+
+  .teaching-supervision-add-btn {
+    width: 100%;
+  }
+}
+
 .status-internship {
   background: rgba(59, 130, 246, 0.12);
   color: #1d4ed8;
